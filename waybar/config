@@ -32,7 +32,6 @@
         "bluetooth",
         "network",
         "pulseaudio",
-        "backlight",
         "battery",
         "tray"
     ],
@@ -47,16 +46,6 @@
         "exec": "ip addr show tun0 2>/dev/null | grep 'inet ' | awk '{print $2}' | cut -d/ -f1 || echo 'no vpn'",
         "interval": 5,
         "tooltip": false
-    },
-
-    "backlight": {
-      "device": "intel_backlight",
-      "format": "{icon} {percent}%",
-      "format-icons": ["󰃞", "󰃟", "󰃠"],
-      "scroll-step": 5,
-      "on-scroll-up": "brightnessctl set +5%",
-      "on-scroll-down": "brightnessctl set 5%-",
-      "tooltip": false
     },
 
     "hyprland/workspaces": {
